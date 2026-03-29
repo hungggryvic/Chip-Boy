@@ -1,0 +1,2 @@
+Change Component Footprint: Designator=C3 Old Footprint=CAPPRD250W50D630H1120 New Footprint=CAPPRD500W50D500H1100
+Change Component Comment : Designator=C3 Old Comment=47uF capacitor New Comment=100uF_5mm

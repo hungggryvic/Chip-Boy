@@ -1,0 +1,11 @@
+Change Component Designator: OldDesignator=0.1uF NewDesignator=C1
+Change Component Designator: OldDesignator=0.1uF NewDesignator=C2
+Change Component Designator: OldDesignator=0.1uF NewDesignator=C5
+Change Component Designator: OldDesignator=0.1uF NewDesignator=C6
+Change Component Designator: OldDesignator=0.1uF NewDesignator=C9
+Change Component Designator: OldDesignator=47uF NewDesignator=C4
+Change Component Designator: OldDesignator=100uF NewDesignator=C3
+Added Member To Class: ClassName=CHIPBOY_Mk_II Member=Component C1 0_1uF100V_CAP_FA14X7R2A104KNU00
+Added Member To Class: ClassName=CHIPBOY_Mk_II Member=Component C2 0_1uF100V_CAP_FA14X7R2A104KNU00
+Added Member To Class: ClassName=CHIPBOY_Mk_II Member=Component C5 0_1uF100V_CAP_FA14X7R2A104KNU00
+Added Member To Class: ClassName=CHIPBOY_Mk_II Member=Component C9 0_1uF100V_CAP_FA14X7R2A104KNU00

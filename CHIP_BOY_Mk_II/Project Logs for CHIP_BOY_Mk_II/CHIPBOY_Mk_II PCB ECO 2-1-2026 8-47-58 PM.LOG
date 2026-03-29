@@ -1,0 +1,5 @@
+Change Component Designator: OldDesignator=BNO055 NewDesignator=BNO
+Added Pin To Net: NetName=NetENCODER_1 Pin=ENCODER-1
+Added Pin To Net: NetName=NetENCODER_1 Pin=MCP-17
+Added Net: Name=NetENCODER_1
+Added Member To Class: ClassName=CHIPBOY_Mk_II Member=Component C6 100nF cap
