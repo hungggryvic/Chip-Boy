@@ -345,10 +345,10 @@ static const uint8_t* const sl_syms[SL_NUM_SYMS] = {
 // Three reels, each 20×20 px box (18px sprite + 1px padding each side)
 #define SL_REEL_W   20
 #define SL_REEL_H   20
-#define SL_REEL_GAP  5   // gap between reel boxes
+#define SL_REEL_GAP  5  
 
 // Vertical: zone from y=9 (below top bar) to y=56 (above HUD). Centre boxes in that zone.
-#define SL_REEL_Y   ((9 + 56 - SL_REEL_H) / 2)   // = (65 - 20) / 2 = 22
+#define SL_REEL_Y   ((9 + 56 - SL_REEL_H) / 2)   
 
 // X positions for left edges of each reel box
 static inline int slReelX(int i) {

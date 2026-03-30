@@ -2,14 +2,13 @@
 //  OBSCURUS — CHIP-BOY (WatchOS App Module)
 //  Display: SSD1306 (I2C D0/D1, addr 0x3C)
 //  Buttons: MCP23008 (BTN1/2/3 + nav switch)
-//  Pause:   Encoder switch D6 (same as IronTides / Blackjack)
+//  Pause:   Encoder
 //
 //  Controls in game:
 //    BTN2  (GP6) = JUMP (double jump)
 //    BTN1  (GP0) = ATTACK / SHOOT
 //    BTN3  (GP1) = CAST SPELL (once learned)
-//    UP    (GP3) = switch to sword
-//    DOWN  (GP4) = switch to bow
+//    DOWN  (GP4) = switch to bow/switch to sword
 //    LEFT  (GP2) = move left
 //    RIGHT (GP5) = move right
 //    ENC SW      = PAUSE
@@ -105,10 +104,6 @@ static inline bool ob_btnJustPressed(uint8_t p) { return !(ob_mcpGpio & (1u << p
 // ============================================================================
 // ENCODER SWITCH
 // ============================================================================
-//#ifndef ENC_SW_PIN
-//#define ENC_SW_PIN D6
-//#endif
-
 static const unsigned long OB_ENC_DEBOUNCE = 35;
 static bool   ob_encSwStable    = HIGH;
 static bool   ob_encSwLastRead  = HIGH;
@@ -1077,7 +1072,6 @@ static void ob_tryTransition(uint8_t dir) {
   if (dir == 3) { ob_player.y = OB_TILE_SIZE; ob_player.vy = 0; }
 }
 
-// ============================================================================
 // ============================================================================
 // PHYSICS
 // ============================================================================
@@ -2253,6 +2247,7 @@ static void ob_drawHUD() {
   }
 }
 
+// ============================================================================
 // PAUSE SCREEN
 // ============================================================================
 static void ob_drawPauseScreen() {

@@ -2,7 +2,7 @@
 // IRON TIDES — CHIP-BOY PORT
 // Display: SSD1306 (I2C D0/D1, addr 0x3C)
 // Buttons: MCP23008 (BTN1/2/3 + nav switch)
-// Pause: Encoder switch D6 (debounced press event)
+// Pause: Encoder switch (debounced press event)
 // ==============================
 
 #include <Arduino.h>
@@ -16,13 +16,13 @@
 #endif
 
 // ============================================================================
-// WATCH OS APP WRAPPER API (so your menu can call this like other apps)
+// WATCH OS APP WRAPPER API
 // ============================================================================
 static bool s_gameActive = false;
 static bool s_setupRan = false;
 
 bool ironTidesIsActive() { return s_gameActive; }
-extern void gameExitToMenu();   // implemented in your Watch OS .ino
+extern void gameExitToMenu();   
 
 // Forward-declare public app API (normally in a header)
 void ironTidesEnter();
@@ -138,17 +138,16 @@ static void ensureDisplayInit() {
 //#define ENC_SW_PIN D6
 // Encoder debouncer vars removed — main loop handles ENC_SW_PIN.
 
-// Optional (not needed for game, but defined in your doc near encoder)
+
 #define ENC_A_PIN D8
 #define ENC_B_PIN D7
 
-// Buzzer pin (set to your Chip-Boy buzzer pin; doc shows BUZZER_PIN used in init)
+// Buzzer pin 
 #ifndef BUZZER_PIN
 #define BUZZER_PIN D2
 #endif
 
-// -------- MCP23008 (Chip-Boy buttons) ----------
-// Your doc indicates MCP init: all inputs, pull-ups on GP0..GP6
+// -------- MCP23008 ----------
 // And mapping: BTN1->GP0, BTN2->GP6, BTN3->GP1, UP->GP4, DOWN->GP3, RIGHT->GP2, LEFT->GP5
 
 #define MCP_ADDR   0x20
@@ -175,7 +174,7 @@ static bool mcpReadReg(uint8_t reg, uint8_t &out) {
   return true;
 }
 
-// -------- Button debounce struct (same style as your Chip-Boy doc)
+//Button debounce struct 
 
 static const unsigned long BTN_DEBOUNCE_MS = 25;
 
@@ -529,7 +528,7 @@ static void fireLeftForBoss() {
   // Main shot toward player
   addBullet(sx, sy, ux*2.0f, uy*2.0f, true);
 
-  // Optional: keep your boss “triple-ish” flavor with a tiny spread around aim
+  
   float angle=0.25f, cosA=cos(angle), sinA=sin(angle);
   float lx = ux*cosA - uy*sinA, ly = ux*sinA + uy*cosA;
   float rx2 = ux*cosA + uy*sinA, ry2 = -ux*sinA + uy*cosA;
@@ -787,7 +786,7 @@ static void ironTidesSetup_Internal() {
 }
 
 static void ironTidesLoop_Internal() {
-  // --- read MCP + update debounced buttons (Chip-Boy loop style)
+  // --- read MCP + update debounced buttons
   uint8_t v;
   if (mcpReadReg(MCP_GPIO, v)) { g_mcp_gpio = v; g_mcp_ok = true; }
   else { g_mcp_ok = false; g_mcp_gpio = 0xFF; }

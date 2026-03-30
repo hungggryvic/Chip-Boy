@@ -469,7 +469,7 @@ static void normalizeDateTimeSigned() {
   while (hour < 0) { hour += 24; day--; }
   while (hour >= 24) { hour -= 24; day++; }
 
-  normalizeDateTime(); // your existing function
+  normalizeDateTime();
 }
 
 // Tries to set clock from GPS once at boot.
@@ -3214,7 +3214,7 @@ static void distanceExit() {
 static void handleDistance() {
   // BTN3 exits back to menu
   if (btnWasShortPressed(b3)) {
-    buzzerStartLow();   // matches your “exit beep”
+    buzzerStartLow();   
     distanceExit();
     return;
   }
@@ -3319,7 +3319,7 @@ static void handleDistance() {
   display.print(" ");
   display.print(unitStr);
 
-  // EXIT bottom-right (like your other apps)
+  // EXIT bottom-right 
   display.setTextSize(1);
   display.setCursor(104, 55);
   display.print("EXIT");
