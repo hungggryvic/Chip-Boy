@@ -1,4 +1,0 @@
-Added Pin To Net: NetName=NetDF PLAYER_6 Pin=DF PLAYER-6
-Added Pin To Net: NetName=NetDF PLAYER_6 Pin=SPK-P
-Added Net: Name=NetDF PLAYER_6
-Added Member To Class: ClassName=CHIPBOY_Mk_II Member=Component ESP xiao_esp32
