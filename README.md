@@ -10,8 +10,7 @@ The ESP32-S3 Sense onboard camera and microphone enable image capture and audio 
 
 Battery voltage is monitored using a voltage divider circuit connected to an ADC pin, allowing estimation of remaining battery life. The system also uses an MCP23008 I2C GPIO expander to manage inputs and control logic efficiently. A small 3V buzzer provides notifications and audio feedback. 
 
-The Chip-Boy operating system is modular, allowing additional applications to be added through separate `.h` and `.cpp` files.
---
+---
 
 ## Features
 
