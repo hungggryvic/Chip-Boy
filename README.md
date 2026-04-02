@@ -1,5 +1,5 @@
 # Chip-Boy
-![Chip-Boy Mk.2](images/chipboymk2fullsystem.png)
+![Chip-Boy Mk.2](images/chipboymk2_fullsystem.png)
 The Chip-Boy is an ESP32-based smartwatch built on a custom PCB. It is a wrist-mounted device designed as a compact “mini computer,” focused on sensor integration, exploration, and entertainment.
 
 The system integrates multiple sensors, including a BME280 environmental sensor, a time-of-flight distance sensor, and a BNO055 IMU for motion tracking. A 1.3" 128x64 OLED display provides a user interface, allowing navigation through menus and submenus using a combination of buttons and a rotary encoder, all operable with one hand.
@@ -127,14 +127,14 @@ The Chip-Boy is built around a custom-designed embedded hardware platform integr
 
 ### Power System
 
-- **LiPo Battery**  
-  Provides portable power for the wearable device.
+- **3.7V 900mAh LiPo Battery**  
+  Provides portable power for the wearable device. Runtime varies based on usage. Heavy power consumption (laser, flashlight, music player) can bring the device to it's minimum operating voltage within 2.5 hours or less, while light usage and battery-saving practices can extend runtime up to 12 hours. More testing and calculations will be conducted in the near future for better analysis. 
 
 - **Voltage Divider (ADC Monitoring Circuit)**  
-  Allows the ESP32 to measure battery voltage and estimate remaining charge.
+  100k/100k Ohm divider allows the ESP32 to measure battery voltage and estimate remaining charge.
 
 - **Power Switching Circuit**  
-  Enables safe control of system power and peripheral activation.
+  2n7000 Mosfet switching circuit with decoupling and bulk capacitors enables safe control of system power and peripheral activation.
 
 ---
 
@@ -157,6 +157,9 @@ The Chip-Boy is built around a custom-designed embedded hardware platform integr
 - **Camera Interface** → Native ESP32-S3 camera connection  
 
 ---
+
+## Schematic
+![Chip-Boy Mk.2](images/chipboymk2_schematic.png)
 
 ## Software
 
