@@ -185,25 +185,25 @@ Each application operates within its own state while sharing global resources su
 The system includes multiple fully integrated applications, each with dedicated logic and UI handling:
 
 - **Camera App**  
-  Captures images using the ESP32-S3 camera module. Implements a multi-stage pipeline including grayscale frame capture, image scaling to 128×64, thresholding for OLED preview, and saving both bitmap previews and full-resolution JPEGs to SD storage. :contentReference[oaicite:0]{index=0}  
+  Captures images using the ESP32-S3 camera module. Implements a multi-stage pipeline including grayscale frame capture, image scaling to 128×64, thresholding for OLED preview, and saving both bitmap previews and full-resolution JPEGs to SD storage.  
 
 - **Microphone App**  
-  Records audio using I2S input at 16 kHz and dynamically constructs WAV files in memory before saving to SD. Includes real-time waveform visualization and recording state management. :contentReference[oaicite:1]{index=1}  
+  Records audio using I2S input at 16 kHz and dynamically constructs WAV files in memory before saving to SD. Includes real-time waveform visualization and recording state management.
 
 - **Navigation App**  
-  Provides GPS-based navigation with distance and bearing calculations using the Haversine formula. Includes keypad-based coordinate entry, round-trip tracking, persistent storage using NVS (Preferences), and distance-based adaptive audio feedback. :contentReference[oaicite:2]{index=2}  
+  Provides GPS-based navigation with distance and bearing calculations using the Haversine formula. Includes keypad-based coordinate entry, round-trip tracking, persistent storage using NVS (Preferences), and distance-based adaptive audio feedback. 
 
 - **Location App**  
-  Displays real-time time/date and location information with graphical overlays, including a world map rendered directly on the OLED. :contentReference[oaicite:3]{index=3}  
+  Displays real-time time/date and location information with graphical overlays, including a world map rendered directly on the OLED. 
 
 - **Radio App**  
-  Manages audio playback using the DFPlayer Mini, including station-based track organization, metadata handling, shuffle functionality, and animated UI elements such as waveform rendering. :contentReference[oaicite:4]{index=4}  
+  Manages audio playback using the DFPlayer Mini, including station-based track organization, metadata handling, shuffle functionality, and animated UI elements such as waveform rendering.  
 
 - **Recordings App**  
-  Interfaces with stored audio files on the SD card, enabling playback, track navigation, and UI animations synchronized with audio output. :contentReference[oaicite:5]{index=5}  
+  Interfaces with stored audio files on the SD card, enabling playback, track navigation, and UI animations synchronized with audio output. 
 
 - **Battery Monitoring App**  
-  Continuously samples battery voltage in the background, applies averaging and decimation to maintain long-term history, and renders a time-scaled graph of battery performance. Includes voltage-to-state-of-charge estimation using interpolation. :contentReference[oaicite:6]{index=6}  
+  Continuously samples battery voltage in the background, applies averaging and decimation to maintain long-term history, and renders a time-scaled graph of battery performance. Includes voltage-to-state-of-charge estimation using interpolation. 
 
 ---
 
