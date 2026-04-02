@@ -1,5 +1,5 @@
 # Chip-Boy
-
+(images/chipboymk2fullsystem.jpg)
 The Chip-Boy is an ESP32-based smartwatch built on a custom PCB. It is a wrist-mounted device designed as a compact “mini computer,” focused on sensor integration, exploration, and entertainment.
 
 The system integrates multiple sensors, including a BME280 environmental sensor, a time-of-flight distance sensor, and a BNO055 IMU for motion tracking. A 1.3" 128x64 OLED display provides a user interface, allowing navigation through menus and submenus using a combination of buttons and a rotary encoder, all operable with one hand.
