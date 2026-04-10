@@ -53,6 +53,7 @@ const int8_t kSin32[32] = {
 
 // ── Track tables ──────────────────────────────────────────────────────────
 
+
 static const TrackInfo kTracks01[11] = {
   {"",""},
   {"Bulkkoch Eulo", "past self"},
@@ -194,19 +195,92 @@ static const TrackInfo kTracks05[21] = {
   {"Bohemain Rhapsody","Queen"},
 };
 
-static const TrackInfo kTracks06[12] = {
+
+static const TrackInfo kTracks06[84] = {
   {"",""},
-  {"Big Iron","Marty Robbins"},
-  {"Lone Star","Tony Marcus"},
-  {"Heartaches By The Number","Guy Mitchell"},
-  {"Goin' Under","Darrell Perry, Tommy Smith"},
-  {"It's A Sin To Tell A Lie","The Ink Spots"},
-  {"In The Shadow Of The Valley","Jerry Burnham, Don Burnham"},
-  {"Johnny Guitar","Peggy Lee"},
-  {"Stars Of The Midnight Range","Johnny Bond"},
-  {"Let's Ride Into The Sunset Together","Tony Vice, Jerry Burnham"},
-  {"I'm Movin' Out","The Roues Brothers"},
-  {"It's A Sin","Eddy Arnold"},
+  {"Helena", "My Chemical Romance"},
+  {"What's It Feel Like To Be A Ghost?", "Taking Back Sunday"},
+  {"Swing, Swing", "The All-American Rejects"},
+  {"All Around Me", "Flyleaf"},
+  {"Say It Ain't So", "Weezer"},
+  {"When I Come Around", "Green Day"},
+  {"Dammit", "Blink-182"},
+  {"I Will Not Bow", "Breaking Benjamin"},
+  {"Adam's Song", "Blink-182"},
+  {"When It Rains", "Paramore"},
+  {"I Miss You", "Blink-182"},
+  {"Last Resort", "Papa Roach"},
+  {"Disconnected", "Face To Face"},
+  {"Nine in the Afternoon", "Panic! At The Disco"},
+  {"Ready To Fall", "Rise Against"},
+  {"Ides Of March", "Silverstein"},
+  {"Liar (It Takes One to Know One)", "Taking Back Sunday"},
+  {"Inside the Fire", "Disturbed"},
+  {"Graveyard Dancing", "D.R.U.G.S."},
+  {"Monsters", "Matchbook Romance"},
+  {"I Won't Say The Lord's Prayer", "The Wonder Years"},
+  {"My Blue Heaven", "Taking Back Sunday"},
+  {"Smile In Your Sleep", "Silverstein"},
+  {"Carl Barker", "Dance Gavin Dance"},
+  {"Blurry", "Puddle Of Mudd"},
+  {"The Good Left Undone", "Rise Against"},
+  {"Here Without You", "3 Doors Down"},
+  {"Brick by Boring Brick", "Paramore"},
+  {"The Only Difference Between Martyrdom and Suicide Is Press Coverage", "Panic! At The Disco"},
+  {"Cemetery Drive", "My Chemical Romance"},
+  {"Stricken", "Disturbed"},
+  {"Shadow of the Day", "Linkin Park"},
+  {"Faint", "Linkin Park"},
+  {"Sweetness", "Jimmy Eat World"},
+  {"Holiday", "Green Day"},
+  {"Sugar, We're Goin Down", "Fall Out Boy"},
+  {"My Apocalypse", "Escape The Fate"},
+  {"Uneasy Hearts Weigh The Most", "Dance Gavin Dance"},
+  {"Bat Country", "Avenged Sevenfold"},
+  {"Suitcase", "Circa Survive"},
+  {"Love Like Winter", "AFI"},
+  {"Miss Murder", "AFI"},
+  {"NASA", "Dance Gavin Dance"},
+  {"Mad", "Emarosa"},
+  {"Same Tight Rope", "Emarosa"},
+  {"If It Means A Lot To You", "A Day To Remember"},
+  {"All Signs Point To Lauderdale", "A Day To Remember"},
+  {"Turn Off the Lights", "Dance Gavin Dance"},
+  {"Welcome Home", "Coheed and Cambria"},
+  {"Dyed In The Wool", "Circa Survive"},
+  {"So Cold", "Breaking Benjamin"},
+  {"Lost", "Avenged Sevenfold"},
+  {"Move Along", "The All-American Rejects"},
+  {"This Conversation Is Over", "Alesana"},
+  {"The Days Of The Phoenix", "AFI"},
+  {"Slow Down", "The Academy Is..."},
+  {"Forever Fades Away", "Tiger Army"},
+  {"Reinventing Your Exit", "Underoath"},
+  {"Blue and Yellow", "The Used"},
+  {"Never Too Late", "Three Days Grace"},
+  {"MakeDamnSure", "Taking Back Sunday"},
+  {"The Kill", "30 Seconds To Mars"},
+  {"If I'm James Dean, You're Audrey Hepburn", "Sleeping With Sirens"},
+  {"Hey Nightmare, Where Did You Get Those Teeth?", "A Skylit Drive"},
+  {"The Take Over, The Breaks Over", "Fall Out Boy"},
+  {"Face Down", "The Red Jumpsuit Apparatus"},
+  {"Prayer Of The Refugee", "Rise Against"},
+  {"Caraphernelia", "Pierce The Veil"},
+  {"Dance, Dance", "Fall Out Boy"},
+  {"That's What You Get", "Paramore"},
+  {"Heads or Tails, Real Or Not", "Emarosa"},
+  {"F.C.P.R.E.M.I.X.", "The Fall Of Troy"},
+  {"The Webs We Weave", "Escape The Fate"},
+  {"Mr. Owl Ate My Metal Worm", "D.R.U.G.S."},
+  {"Letter from a Thief", "Chevelle"},
+  {"The Diary Of Jane", "Breaking Benjamin"},
+  {"Afterlife", "Avenged Sevenfold"},
+  {"A Single Moment Of Sincerity", "Asking Alexandria"},
+  {"Congratulations, I Hate You", "Alesana"},
+  {"Dirty Little Secret", "The All-American Rejects"},
+  {"Camisado", "Panic! At The Disco"},
+  {"Seduction", "Alesana"},
+  {"Pathetic, Ordinary", "Alesana"},
 };
 
 // ── Station/track helpers ─────────────────────────────────────────────────
@@ -217,7 +291,7 @@ uint8_t radioTrackMaxForStation(uint8_t station) {
   if (station == 3) return 30;
   if (station == 4) return 41;
   if (station == 5) return 20;
-  if (station == 6) return 11;
+  if (station == 6) return 83;
   return 10;
 }
 
@@ -264,7 +338,7 @@ unsigned long radioIgnoreDfErrorsUntilMs = 0;
 static const uint8_t RADIO_MAX_EVENTS_PER_LOOP = 8;
 
 // Shuffle
-static const uint8_t RADIO_SHUFFLE_MAX = 41;
+static const uint8_t RADIO_SHUFFLE_MAX = 83;
 static uint8_t radioShuffleQueue[RADIO_SHUFFLE_MAX];
 static uint8_t radioShuffleLen = 0;
 static uint8_t radioShufflePos = 0;
